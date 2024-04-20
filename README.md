@@ -1,128 +1,66 @@
-Blvck Paris Clothing eCommerce
-Welcome to the Blvck Paris Clothing eCommerce project repository! This project aims to create an online platform for Blvck Paris Clothing, offering a seamless shopping experience for customers to explore and purchase stylish streetwear and essentials.
+---
 
-Database Setup
-To set up the database for the Blvck Paris Clothing eCommerce project, follow these steps:
+# Blvck Paris Clothing eCommerce Sample Web Page Development
 
-Create a new MySQL database with a proper name.
-Copy the following code and create a file with the name that you used to create the database (Example - YourDBName.sql).
-Use a tool like phpMyAdmin or MySQL command line to import the create SQL dump file (YourDBName.sql).
+![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/202d0d84-d7a9-4b22-b358-97535cbf2719)
 
 
-Sql Code 
+Welcome to the Blvck Paris Clothing eCommerce sample web page development project repository! This project showcases a sample online platform for Blvck Paris Clothing, offering a glimpse into a seamless shopping experience for customers to explore and purchase stylish streetwear and essentials.
 
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 06:08 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+## Features
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+- **Product Catalog:** Browse through a curated collection of trendy streetwear and classic essentials.
+- **User Authentication:** Register an account or log in to access personalized features and make purchases securely.
+- **Shopping Cart:** Add items to your cart, review your selections, and proceed to checkout.
+- **Secure Checkout:** Complete your purchase with confidence using our secure payment gateway.
+- **Order Management:** Track your orders and manage your account details.
 
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/96612757-3f8f-4bd0-b714-e8049f3c6e6f)
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/a8df8182-57c5-4041-ac6e-ddc2cc899a74)
 
---
--- Database: `YourDBName`
---
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/4aad84d8-8637-4959-88ef-e50671a308ff)
 
--- --------------------------------------------------------
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/c6990da6-0ad8-4cbe-a57a-4df267ad9fbb)
 
---
--- Table structure for table `cart`
---
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/fc91a78e-4920-4d8e-982b-53d8df9303df)
 
-CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `color` varchar(50) DEFAULT NULL,
-  `size` varchar(10) DEFAULT NULL,
-  `added_on` datetime DEFAULT current_timestamp(),
-  `product_name` varchar(255) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `color`, `size`, `added_on`, `product_name`, `price`) VALUES
-(47, 11, 131, 1, '0', 'XS', '2024-03-16 08:07:59', 'Blvck Sweater Black', 47800.00),
-(51, 10, 129, 1, '0', 'S', '2024-03-17 13:49:28', 'Charcoal Hoodie', 47800.00);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `country` varchar(255) DEFAULT NULL,
-  `address` text DEFAULT NULL,
-  `phone_number` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `country`, `address`, `phone_number`) VALUES
-(9, 'John', 'Doe', 'johndoe@example.com', 'password123', '2023-05-12 09:30:45', 'USA', '123 Main Street, Anytown, CA', '1234567890'),
-(10, 'Jane', 'Smith', 'janesmith@example.com', 'password456', '2023-05-13 10:45:32', 'Canada', '456 Elm Street, Somewhere, ON', '9876543210'),
-(11, 'Michael', 'Johnson', 'michaeljohnson@example.com', 'password789', '2023-05-14 11:15:28', 'UK', '789 Maple Avenue, Nowhere, LDN', '5551234567'),
-(12, 'Emily', 'Brown', 'emilybrown@example.com', 'passwordabc', '2023-05-15 12:30:59', 'Australia', '321 Oak Street, Anyplace, NSW', '7778889999');
+- ![image](https://github.com/SusithD/Blvck-Paris-Web-Application/assets/67213765/101eff08-6efe-49d6-802a-265934077ff0)
 
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
+## Technologies Used
 
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP
+- **Database:** MySQL
 
---
--- AUTO_INCREMENT for dumped tables
---
+## Getting Started
 
---
--- AUTO_INCREMENT for table `cart`
---
-ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+To get started with the Blvck Paris Clothing eCommerce sample web page development project, follow these steps:
 
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
+1. Clone this repository to your local machine.
+2. Set up your local development environment with PHP and MySQL.
+3. Import the MySQL database schema provided in the `database` directory.
+4. Configure your database connection settings in the PHP files.
+5. Start your local server environment.
+6. Access the sample webpage in your web browser.
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+## Contributing
+
+We welcome contributions from the community to help improve the Blvck Paris Clothing eCommerce sample web page development project. If you'd like to contribute, please follow these guidelines:
+
+1. Fork the repository and create a new branch for your feature or bug fix.
+2. Make your changes and ensure all tests pass.
+3. Commit your changes with a descriptive commit message.
+4. Push your changes to your fork and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+Gratitude to the community for their support and feedback during the development process.
+Appreciation to the mentors and educators whose guidance and expertise have contributed to the growth of this project.
+
+---
