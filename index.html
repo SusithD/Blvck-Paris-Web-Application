@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>UniClub - Free eCommerce T-Shirt Store HTML Website Template</title>
+  <title>Blvck Paris - Exclusive Streetwear Collection</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="author" content="">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <meta name="keywords" content="minimalist fashion, elegant clothing, luxury wear, modern apparel, designer clothes, urban fashion, high-quality fabrics, fashion-forward, trendy outfits, sustainable fashion">
+  <meta name="description" content="Discover the exclusive Blvck Paris streetwear collection. Shop the latest trends in urban fashion with our unique designs.">
 </head>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -196,17 +197,13 @@
               <a href="index.php" class="nav-link mx-2 active">Home</a>
             </li>
             <li class="nav-item">
-              <a href="shop.html" class="nav-link mx-2">Shop</a>
+              <a href="shop.php" class="nav-link mx-2">Shop</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link mx-2">T-Shirts</a>
+              <a href="text.html" class="nav-link mx-2">About Us</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link mx-2">Hoodies</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://templatesjungle.gumroad.com/l/uniclub-t-shirt-bootstrap5-eCommerce-website-template"
-                class="nav-link mx-2" target="_blank">GET PRO</a>
             </li>
           </ul>
 
@@ -214,22 +211,23 @@
 
           <div class="d-none d-lg-flex align-items-end">
             <ul class="d-flex justify-content-end list-unstyled m-0">
-              <li>
-                <a href="signIn.html" class="mx-3">
-                  <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
+            <li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                <!-- User is logged in, show profile icon or logout link -->
+                <a href="profile.php" class="mx-3"> <!-- Adjust `profile.php` to the path of your user profile or dashboard page -->
+                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
                 </a>
-              </li>
-              <li>
-                <a href="wishlist.html" class="mx-3">
-                  <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
+                <?php else: ?>
+                <!-- User is not logged in, keep the sign-in link -->
+                <a href="signIn.html" class="mx-3"> <!-- Make sure the extension is correct, .php if you've converted your pages -->
+                    <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
                 </a>
-              </li>
+                <?php endif; ?>
+            </li>
 
-              <li class="">
+            <li class="">
                 <a href="cart.php" class="mx-3">
                     <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
-                    <span class="position-absolute translate-middle badge rounded-circle bg-primary">
-                        03
                     </span>
                 </a>
             </li>
@@ -362,7 +360,7 @@
                 <a href="#" class="btn-wrap cart-link d-flex align-items-center text-capitalize fs-6 ">add to cart <i
                     class="icon icon-arrow-io pe-1"></i>
                 </a>
-                <a href="single-product.html" class="view-btn">
+                <a href="Products/product2.php" class="view-btn">
                   <i class="icon icon-screen-full"></i>
                 </a>
                 <a href="#" class="wishlist-btn">
@@ -372,7 +370,7 @@
             </div>
             <div class="product-detail d-flex justify-content-between align-items-center mt-4">
               <h4 class="product-title mb-0">
-                <a href="Products/White_tokyo_hoodie.html">White Tokyo Hoodie</a>
+                <a href="Products/White_tokyo_hoodie.php">White Tokyo Hoodie</a>
               </h4>
               <p class="m-0 fs-5 fw-normal"> Rs 37,500.00</p>
             </div>
@@ -401,7 +399,7 @@
             </div>
             <div class="product-detail d-flex justify-content-between align-items-center mt-4">
               <h4 class="product-title mb-0">
-                <a href="single-product.html">Blvck x Whte' Death Kiss Sweater</a>
+                <a href="Products/product2.php">Blvck x Whte' Death Kiss Sweater</a>
               </h4>
               <p class="m-0 fs-5 fw-normal">Rs 23,700.00</p>
             </div>
@@ -427,7 +425,7 @@
             </div>
             <div class="product-detail d-flex justify-content-between align-items-center mt-4">
               <h4 class="product-title mb-0">
-                <a href="single-product.html">Whte Signature Hoodie</a>
+                <a href="Products/product3.php">Whte Signature Hoodie</a>
               </h4>
               <p class="m-0 fs-5 fw-normal">Rs 24,760.00</p>
             </div>
@@ -456,7 +454,7 @@
             </div>
             <div class="product-detail d-flex justify-content-between align-items-center mt-4">
               <h4 class="product-title mb-0">
-                <a href="single-product.html">Whte Evil Twin Teddy Bear Hoodie</a>
+                <a href="Products/product4.php">Whte Evil Twin Teddy Bear Hoodie</a>
               </h4>
               <p class="m-0 fs-5 fw-normal">Rs 45,765.00</p>
             </div>
@@ -482,7 +480,7 @@
             </div>
             <div class="product-detail d-flex justify-content-between align-items-center mt-4">
               <h4 class="product-title mb-0">
-                <a href="single-product.html">Whte Angel Hoodie</a>
+                <a href="Products/product5.php">Whte Angel Hoodie</a>
               </h4>
               <p class="m-0 fs-5 fw-normal">Rs 45,765.00</p>
             </div>
@@ -534,7 +532,7 @@
           </div>
           <div class="timeline-content">
             <h3>Foundation</h3>
-            <p>UniClub was founded with a mission to provide sustainable fashion, pioneering the use of
+            <p>Blvck was founded with a mission to provide sustainable fashion, pioneering the use of
               organic materials in our products.</p>
           </div>
         </div>
@@ -556,7 +554,7 @@
           </div>
           <div class="timeline-content">
             <h3>Awards & Recognition</h3>
-            <p>UniClub was honored with the "Eco-Conscious Brand" award at the Global Fashion Summit,
+            <p>Blvck was honored with the "Eco-Conscious Brand" award at the Global Fashion Summit,
               recognizing our efforts in promoting sustainable fashion.</p>
           </div>
         </div>
